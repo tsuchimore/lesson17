@@ -1,0 +1,16 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @task.title %>
+</p>
+
+<p>
+  <strong>Status:</strong>
+  <%= if @task.status == 0 then "下書き" end %>
+  <%= if @task.status == 1 then "公開" end%>
+  <%= if @task.status == 2 then "削除" end%>
+</p>
+
+<%= link_to 'Edit', edit_task_path(@task) %> |
+<%= link_to 'Back', tasks_path %>
